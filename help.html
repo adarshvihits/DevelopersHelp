@@ -15,7 +15,8 @@
 @Html.Encode(String.Format("{0:dd-MMM-yyyy}", Model.AssetRequest.Asset.DateOfPurchase))
 <br><br>
 @Html.CheckBoxFor(m => m.PreEnrollment.Compensation.ESI)
-<br><br>
+<br>
+---------------------------------------------------------------------------<br>
 $('body').append('<div class="form-overlay"></div>');
 <br><br>
 $('select.form-control').addClass('selectpicker');
@@ -41,4 +42,21 @@ $('#PTMonth_Code option:selected').text()
 <br><br>
 document.body.id = "kt_body";
 $('body').html(xhr.responseText);
+<br><br>
+----------export excel file protection-----------------<br>
+using Spire.Xls;
+
+ ExcelPassword EP = new ExcelPassword();
+ EP = await _commonService.GetExcelPassword("Asset Allocation (" + TabName + ")", "Excel");
+
+
+if (EP.NeedPassword)
+                            {
+                                Workbook book = new Workbook();
+                                book.LoadFromStream(stream);
+                                //Protect Workbook
+                                book.Protect(EP.Password);
+                                book.SaveToStream(stream);
+                            }
+----------------------------------------------------------
 

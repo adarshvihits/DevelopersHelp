@@ -1,3 +1,9 @@
+<a href="home.html">Home</a>&nbsp;
+<a href="links.html">Links</a>&nbsp;
+<a href="formPoints.html">New Forms Points</a>&nbsp;
+<a href="general.html">General Points</a>&nbsp;
+<a href="help.html">Help</a><br><br>
+
 @Html.TextBoxFor(m => m.AssetRequest.Deduction, new { @class = "form-control form-control-sm", @maxlength = 8, @placeholder = "Deduction", @onkeypress = "return onlyNumberKey(event)" })
 <br><br>
 @Html.TextBoxFor(m => m.AssetRequest.AssetReturnDate, "{0:dd-MMM-yyyy}", new { @class = "form-control kt_datepicker_8", @readonly = "true", @placeholder = "Return Date", onchange = "validateReturnDate(this,'assetReturnDte')" })

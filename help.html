@@ -31,32 +31,32 @@ $('#PTMonth_Code option:selected').text()
     });
 
 <br><br>
- document.onreadystatechange = function () {
-        if (document.readyState === 'interactive') {
-            $('.spinner').show();
-        }
-        else {
-            //$('.spinner').hide();
-        }
-    }
+ document.onreadystatechange = function () {<br>
+        if (document.readyState === 'interactive') {<br>
+            $('.spinner').show();<br>
+        }<br>
+        else {<br>
+            //$('.spinner').hide();<br>
+        }<br>
+    }<br>
 <br><br>
-document.body.id = "kt_body";
-$('body').html(xhr.responseText);
+document.body.id = "kt_body";<br>
+$('body').html(xhr.responseText);<br>
 <br><br>
 ----------export excel file protection-----------------<br>
 using Spire.Xls;
-
- ExcelPassword EP = new ExcelPassword();
+<br>
+ ExcelPassword EP = new ExcelPassword();<br>
  EP = await _commonService.GetExcelPassword("Asset Allocation (" + TabName + ")", "Excel");
+ <br>
 
-
-if (EP.NeedPassword)
-                            {
-                                Workbook book = new Workbook();
-                                book.LoadFromStream(stream);
-                                //Protect Workbook
-                                book.Protect(EP.Password);
-                                book.SaveToStream(stream);
-                            }
+if (EP.NeedPassword)<br>
+                            {<br>
+                                Workbook book = new Workbook();<br>
+                                book.LoadFromStream(stream);<br>
+                                //Protect Workbook<br>
+                                book.Protect(EP.Password);<br>
+                                book.SaveToStream(stream);<br>
+                            }<br>
 ----------------------------------------------------------
 

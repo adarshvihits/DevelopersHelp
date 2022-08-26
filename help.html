@@ -13,7 +13,7 @@
 $('body').append('<div class="form-overlay"></div>');
 <br><br>
 $('select.form-control').addClass('selectpicker');
-<br><br>
+<br>
 $('#PreEnrollment_PermanentAddress_State_Code').selectpicker('refresh');
 <br><br>
 $('#PTMonth_Code option:selected').text()
@@ -33,3 +33,6 @@ $('#PTMonth_Code option:selected').text()
         }
     }
 <br><br>
+document.body.id = "kt_body";
+$('body').html(xhr.responseText);
+

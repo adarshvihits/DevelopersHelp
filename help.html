@@ -14,7 +14,7 @@
     -------------------------<br>
     select max([MenuCode])+1,'Blood Bank Report', (select SubModuleCode from [FIXED].[mstSubModule] where name='Utilities'),'ESSP','BloodBankReport','icon-expand-fill', 'Index',1,max([MenuCode])+1,'','Master',null, null, null, null,1  from fixed.mstMenu 
 <br>
-    Reports<br>
+    <br>Reports<br>
 ----------<br>
     select SubModuleCode from [FIXED].[mstSubModule] s iNNER JOIN fixed.mstmodule  m on m.ModuleCode= s.ModuleCode  where s.name='Reports'  and  m.Name='DataBank'
     <br>

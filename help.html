@@ -10,6 +10,15 @@
     <br>
     UserGI (Ihits) : '6E37EB36-2C79-4212-9E72-3B787F0E33E6'
     <br><br>
+    Query for adding Menu<br>
+    -------------------------<br>
+    select max([MenuCode])+1,'Blood Bank Report', (select SubModuleCode from [FIXED].[mstSubModule] where name='Utilities'),'ESSP','BloodBankReport','icon-expand-fill', 'Index',1,max([MenuCode])+1,'','Master',null, null, null, null,1  from fixed.mstMenu 
+<br>
+    Reports<br>
+----------<br>
+    select SubModuleCode from [FIXED].[mstSubModule] s iNNER JOIN fixed.mstmodule  m on m.ModuleCode= s.ModuleCode  where s.name='Reports'  and  m.Name='DataBank'
+    <br>
+    --------------------------<br><br>
 @Html.TextBoxFor(m => m.AssetRequest.Deduction, new { @class = "form-control form-control-sm", @maxlength = 8, @placeholder = "Deduction", @onkeypress = "return onlyNumberKey(event)" })
 <br><br>
 @Html.TextBoxFor(m => m.AssetRequest.AssetReturnDate, "{0:dd-MMM-yyyy}", new { @class = "form-control kt_datepicker_8", @readonly = "true", @placeholder = "Return Date", onchange = "validateReturnDate(this,'assetReturnDte')" })

@@ -12,11 +12,16 @@
     <br><br>
     Query for adding Menu<br>
     -------------------------<br>
-    select max([MenuCode])+1,'Blood Bank Report', (select SubModuleCode from [FIXED].[mstSubModule] where name='Utilities'),'ESSP','BloodBankReport','icon-expand-fill', 'Index',1,max([MenuCode])+1,'','Master',null, null, null, null,1  from fixed.mstMenu 
+    insert into  fixed.mstMenu 
+ select max([MenuCode])+1,'Blood Bank Report', (select SubModuleCode from [FIXED].[mstSubModule] where name='Utilities'),
+    'ESSP','BloodBankReport','icon-expand-fill', 'Index',1,max([MenuCode])+1,'','Master',null, null, null, null,1  from fixed.mstMenu
 <br>
     <br>Reports<br>
 ----------<br>
-    select SubModuleCode from [FIXED].[mstSubModule] s iNNER JOIN fixed.mstmodule  m on m.ModuleCode= s.ModuleCode  where s.name='Reports'  and  m.Name='DataBank'
+    insert into  fixed.mstMenu 
+ select max([MenuCode])+1,'Blood Bank Report', (select SubModuleCode from [FIXED].[mstSubModule] s iNNER JOIN fixed.mstmodule  m on m.ModuleCode= s.ModuleCode  where s.name='Reports'  and  m.Name='DataBank'),
+    'ESSP','BloodBankReport','icon-expand-fill', 'Index',1,max([MenuCode])+1,'','Master',null, null, null, null,1  from fixed.mstMenu
+    
     <br>
     --------------------------<br><br>
 @Html.TextBoxFor(m => m.AssetRequest.Deduction, new { @class = "form-control form-control-sm", @maxlength = 8, @placeholder = "Deduction", @onkeypress = "return onlyNumberKey(event)" })

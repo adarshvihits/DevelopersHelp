@@ -79,6 +79,20 @@ if (EP.NeedPassword)<br>
                                 book.SaveToStream(stream);<br>
                             }<br>
 ----------------------------------------------------------
+    <br><br>
+    <span class="Mandatory">*</span>
+    <br>
+    try{
+      }
+            catch (UnauthorizedAccessException e)
+            {
+
+                return RedirectToAction("Login", "Account", new { Area = "" });
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Error", "Account", new { Area = "" });
+            }
 
 </body>
 </html>

@@ -13,15 +13,15 @@
     <br><br>
     Query for adding Menu<br>
     -------------------------<br>
-    insert into  fixed.mstMenu 
- select max([MenuCode])+1,'Blood Bank Report', (select SubModuleCode from [FIXED].[mstSubModule] where name='Utilities'),
-    'ESSP','BloodBankReport','icon-expand-fill', 'Index',1,max([MenuCode])+1,'','Master',null, null, null, null,1  from fixed.mstMenu
+    insert into [FIXED].[mstSubModule]<br>
+ select max(SubModuleCode)+1,'Offer Processing',1,1,max(SubModuleCode)+1,'icon-expand-fill','',1 from [FIXED].[mstSubModule] 
+<br>
+insert into [FIXED].[mstSubModule]<br>
+select max(SubModuleCode)+1,'Offer Processing',8,1,max(SubModuleCode)+1,'icon-expand-fill','',1018 from [FIXED].[mstSubModule]
 <br>
     <br>Reports<br>
 ----------<br>
-    insert into  fixed.mstMenu 
- select max([MenuCode])+1,'Blood Bank Report', (select SubModuleCode from [FIXED].[mstSubModule] s iNNER JOIN fixed.mstmodule  m on m.ModuleCode= s.ModuleCode  where s.name='Reports'  and  m.Name='DataBank'),
-    'ESSP','BloodBankReport','icon-expand-fill', 'Index',1,max([MenuCode])+1,'','Master',null, null, null, null,1  from fixed.mstMenu
+  
     
     <br>
     --------------------------<br><br>

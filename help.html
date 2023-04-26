@@ -38,6 +38,15 @@ select max(SubModuleCode)+1,'Offer Processing',8,1,max(SubModuleCode)+1,'icon-ex
 @Html.CheckBoxFor(m => m.PreEnrollment.Compensation.ESI)
 <br>
 ---------------------------------------------------------------------------<br>
+     $('.multiselect')
+    .multiselect({
+      allSelectedText: 'All',
+      maxHeight: 200,
+      includeSelectAllOption: true
+    })
+    .multiselect('selectAll', false)
+    .multiselect('updateButtonText');
+    <br><br>
 <p>$('body').append('<div class="form-overlay"></div>');</p>
 <br><br>
 $('select.form-control').addClass('selectpicker');

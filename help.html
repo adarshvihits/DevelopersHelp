@@ -103,6 +103,12 @@ if (EP.NeedPassword)<br>
             {
                 return RedirectToAction("Error", "Account", new { Area = "" });
             }
-
+<br><br>---------------------------------------------------------<br><br>
+    document.onkeyup = function (e) {
+        if (e.ctrlKey && e.which == 191) {
+            $('#msd').focus();
+        } 
+    };
+<br><br>---------------------------------------------------------<br><br>
 </body>
 </html>

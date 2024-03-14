@@ -13,13 +13,12 @@
     <br><br>
     Query for adding Menu<br>
     -------------------------<br>
-    insert into [FIXED].[mstSubModule]<br>
- select max(SubModuleCode)+1,'Offer Processing',1,1,max(SubModuleCode)+1,'icon-expand-fill','',1 from [FIXED].[mstSubModule] 
-<br>
-insert into [FIXED].[mstSubModule]<br>
-select max(SubModuleCode)+1,'Offer Processing',8,1,max(SubModuleCode)+1,'icon-expand-fill','',1018 from [FIXED].[mstSubModule]
-<br>
-    <br>Reports<br>
+    insert into  fixed.mstMenu <br>
+ select max([MenuCode])+1,'Employee Activation Edit', <br>
+ (select SubModuleCode from [FIXED].[mstSubModule] where name='Secured Transaction' and ModuleCode = (select  ModuleCode from [FIXED].[mstModule] where Name = 'HRIS'and CompanyCode=@CompanyCode) and CompanyCode=@CompanyCode), <br>
+'DataBank','EnrollmentTest','icon-expand-fill','Index',1,max([MenuCode])+1,'','Transaction' ,null, null, null, null,@CompanyCode  from fixed.mstMenu<br>
+
+
 ----------<br>
   
     

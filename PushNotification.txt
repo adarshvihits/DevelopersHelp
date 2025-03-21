@@ -1,0 +1,9 @@
+->mobile.mstGeneralSettings - enablefirebase
+->check FCMJson File is replaced
+->check public url is correct in Table - fixed.msturllink
+-> sp - getfirebasedetails : retrieve api url from sp and invoke to ensure fcm token is getting.
+-> sp - getfirebasetest : execute with employee id to check the notification.
+
+
+
+

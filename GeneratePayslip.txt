@@ -1,6 +1,6 @@
--> Check public is correct in Table Fixed.mstUrlLink.
+-> Check local link is correct in Table Fixed.mstUrlLink.
 -> Make sure trdp file is placed in API and UI.
--> Check Payslip generation mode in Table support.mstcompanygeneralsettings.
+-> Check Payslip generation mode(BLOB,DATABASE) in Table support.mstcompanygeneralsettings.
 -> Check file storage type in Table support.mstcompanygeneralsettings.
 	|-> If Blob check connection string is correct
 -> Check for errors in event viewer of server.
